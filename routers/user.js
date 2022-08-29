@@ -25,10 +25,11 @@ router
     })
     .put('/:uuid', async (req, res) => {
         const uuid = req.params.uuid
-        const { name, email, role } = req.body;
+        const { name, dob, email, role } = req.body;
         try {
             const user = await User.findOne({ where: { uuid } })
             user.name = name
+            user.dob = dob
             user.email = email
             user.role = role
             await user.save()
