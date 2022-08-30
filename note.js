@@ -1,4 +1,5 @@
 // npm i -g sequelize-cli
+// sequelize init
 // sequelize db:create  (it will create db from config.json)
 
 // --Model--
